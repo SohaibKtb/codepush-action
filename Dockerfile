@@ -1,4 +1,4 @@
-FROM node:10-slim
+FROM node:16.19.0
 
 LABEL version="1.1.0"
 LABEL repository="https://github.com/NishanthShankar/codepush-action"
@@ -10,7 +10,7 @@ LABEL com.github.actions.description="Wraps the appcenter CLI to enable common c
 LABEL com.github.actions.icon="package"
 LABEL com.github.actions.color="gray-dark"
 
-RUN npm install -g appcenter-cli
+RUN npm install -g appcenter-cli@2.12.0
 
 COPY LICENSE README.md /
 COPY "entrypoint.sh" "/entrypoint.sh"
